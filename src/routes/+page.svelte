@@ -1,10 +1,7 @@
-<script>
-	let data = [
-		{ text: 'LinkedIn', link: 'https://www.linkedin.com/in/andrew-brey' },
-		{ text: 'Blog', link: 'https://blog.andrewbrey.com' },
-		{ text: 'GitHub', link: 'https://github.com/andrewbrey' },
-		{ text: 'Resume', link: '/assets/AndrewBrey_resume.pdf' }
-	];
+<script lang="ts">
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <main class="flex flex-col items-center justify-center h-full p-4">
@@ -26,7 +23,7 @@
 		<h1 class="text-4xl font-bold text-center uppercase md:text-6xl text-gray-100">Andrew Brey</h1>
 		<h2 class="mt-2 text-2xl text-center md:mt-3 md:text-3xl text-gray-300">Software Developer</h2>
 		<div class="grid grid-cols-2 gap-4 mt-12 sm:grid-cols-3 md:grid-cols-4">
-			{#each data as l}
+			{#each data.links as l}
 				<a
 					href={l.link}
 					target="_blank"
