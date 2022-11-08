@@ -12,6 +12,9 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"preview": "vite preview"
 	},
+	"dependencies": {
+		"wrangler": "2.1.15"
+	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
